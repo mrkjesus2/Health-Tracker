@@ -1,0 +1,23 @@
+{
+  "name": "health-tracker-app",
+  "description": "Project for Udacity Front End Nanodegree",
+  "main": "index.html",
+  "authors": [
+    "Mark <markweig@gmail.com>"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/mrkjesus2/Health-Tracker",
+  "moduleType": [],
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "backbone": "~1.3.2",
+    "jquery": "~2.2.2"
+  }
+}
