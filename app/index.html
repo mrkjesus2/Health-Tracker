@@ -37,16 +37,60 @@
   </head>
 
   <body>
-    <!-- Add your site or app content here -->
+    <section id="app" class="app">
+      <header class="header">
+        <h1 class="header__logo">Health Tracker App</h1>
+        <nav class="header__nav">
+          <!-- TODO: Find icons for signing in and out -->
+          <a class="header__nav-item" href="">Sign In</a>
+          <a class="header__nav-item" href="">Sign Out</a>
+        </nav>
+      </header>
+        <section class="main">
+          <input class="main__input" type="search" placeholder="What did you eat today?" autofocus>
+          </input>
+        <section class="display">
+          <a class="display__prev" href=""><</a>
+          <h1>This will be the day</h1>
+          <ul class="display__list"></ul>
+          <a class="display__next" href="">></a>
+          <h2 class="display__cals-eaten">This will be the calories eaten</h2>
+          <h2 class="display__cals-burned">This will be the calories burned</h2>
+        </section>
+        <section class="chart">
+          <nav class="chart__nav">
+            <!-- TODO: Not sure that these should be modifiers -->
+            <a class="chart__nav--week" href="">Weekly</a>
+            <a class="chart__nave--month" href="">Monthly</a>
+          </nav>
+          <section>This is where chart stuff will go</section>
+        </section>
+      </section>
+    </section>
+    <!-- TODO: Do I want a footer -->
+    <footer></footer>
 
+    <!-- Item Template -->
+    <script type="text/html" id="item-template">
+      <li class="display__list-item"><%= name %> - <%= calories %></li>
+    </script>
+
+    <!-- Javascript dependencies -->
     <script src="bower_components/jquery/dist/jquery.min.js"></script>
     <script src="bower_components/underscore/underscore-min.js"></script>
     <script src="bower_components/backbone/backbone-min.js"></script>
     <script src="bower_components/firebase/firebase.js"></script>
     <script src="https://cdn.firebase.com/libs/backbonefire/0.5.1/backbonefire.min.js"></script>
-    <script src="bower_components/jasmine-core/lib/jasmine-core/jasmine.js"></script>
+<!--    <script src="bower_components/jasmine-core/lib/jasmine-core/jasmine.js"></script>
     <script src="bower_components/jasmine-core/lib/jasmine-core/jasmine-html.js"></script>
     <script src="bower_components/jasmine-core/lib/jasmine-core/boot.js"></script>
+-->
+
+    <!-- Application Core -->
+    <script src="scripts/views/app.js"></script>
+    <script src="scripts/views/foodItems.js"></script>
+    <script src="scripts/models/foodItem.js"></script>
+    <script src="scripts/collections/foodItems.js"></script>
 
     <!-- Google Analytics: change UA-XXXXX-X to be your site's ID -->
     <script async>
